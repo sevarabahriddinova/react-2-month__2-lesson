@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import ProjectStore from '../../context/store'
+import Header from '../../component/Header'
 
 const Home = () => {
   const [state, dispatch] = useContext(ProjectStore)
@@ -14,9 +15,7 @@ const Home = () => {
 
   return (
     <div>
-       <div className='h-10 bg-gray-600 p-10'>
-         <h2 className='bg-green-500 inline-block p-2 rounded-lg'>LOGIN</h2>
-       </div>
+      <Header/>
 
         <div className='w-[1200px] m-auto mt-40 flex flex-col gap-9 '>
           {

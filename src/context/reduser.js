@@ -10,7 +10,7 @@ const reducer=(state, action)=>{
         }
         case "DELETE": {
           const kk = state.filter(e => e.email !== action.data)
-          saveToLocalStorage("user", dd)
+          saveToLocalStorage("user", kk)
           return kk
         }
       }

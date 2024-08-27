@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Button, Checkbox, Form, Input, InputNumber } from 'antd';
 import ProjectStore from '../../context/store';
+import Header from '../../component/Header';
 
 const Register = () => {
 const [state, dispatch ] = useContext(ProjectStore)
@@ -19,8 +20,10 @@ const [state, dispatch ] = useContext(ProjectStore)
 
 return (
 
-  <div className='min-h-screen w-full flex items-center justify-center mx-auto'>
-    <div className='w-full max-w-[600px] border p-10 flex justify-center bg-slate-300 rounded-lg'>
+  <div>
+    <Header/>
+  <div className='min-h-screen w-full flex items-center justify-center mx-auto '>
+    <div className='w-full max-w-[600px] border p-10 flex justify-center bg-slate-300 rounded-lg '>
     <Form
     layout='vertical'
     name="basic"
@@ -87,6 +90,8 @@ return (
   </Form>
   </div>
   </div>
+  </div>
+
 )
     }
 export default Register;
