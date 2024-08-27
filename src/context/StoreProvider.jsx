@@ -3,7 +3,7 @@ import { useReducer } from "react";
 import { initialState,reducer } from "./reduser";
 
 const StoreProvider=({children})=>{
-    return <ProjectStore.Provider value={useReducer(reducer,initialState)}>
+    return <ProjectStore.Provider value={useReducer(reducer, initialState)}>
         {children}
     </ProjectStore.Provider>
 }

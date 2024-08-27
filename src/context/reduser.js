@@ -1,26 +1,23 @@
-export const initialState={
-    
-        email:"sevara@gmail.com",
-        pasword:"12345678"
-      
-}
+import { saveToLocalStorage } from "../helpers/save-localstorage"
 
-export const reducer=(state,action)=>{
-  
-    if(action.type==="CHANGE__EMAIL"){
-      return{
-        ...state,
-        email:action.email
+const initialState = JSON.parse(localStorage.getItem("user")) || []
+const reducer=(state, action)=>{
+      switch(action.type){
+        case "Register" : {
+          const newUser = [...state, action.values]
+          saveToLocalStorage("user", newUser)
+          return newUser
+        }
+        case "DELETE": {
+          const kk = state.filter(e => e.email !== action.data)
+          saveToLocalStorage("user", dd)
+          return kk
+        }
       }
-    }
-    else if(action.type==="CHANGE__PASWORD"){
-      return{
-        ...state,
-        pasword:action.pasword
-      }
-    }
-    else{
-      return state
-    }
+
    
    }
+
+   export {reducer, initialState}
+
+   

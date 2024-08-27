@@ -1,17 +1,12 @@
-import Home from "./Home"
-import Login from "./Login";
+import RouteController from "./routes/RouteController";
 
   
 
 
  
 function App() {
-  
   return (
-    <>
-    <Login/>
-    <Home/>
-    </>
+    <RouteController/>
   );
 }
 
