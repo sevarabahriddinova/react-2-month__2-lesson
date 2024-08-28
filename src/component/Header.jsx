@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
                 <div className="flex gap-8">
                     <Link to={"/register"} className="text-red-600 font-mono font-bold text-[22px]">REGISTER</Link>
-                    <Link to={"/home"} className="text-blue-800 font-mono font-bold text-[22px]">HOME</Link>
+                    <Link to={"/"} className="text-blue-800 font-mono font-bold text-[22px]">HOME</Link>
                 </div>
             </div>
 
